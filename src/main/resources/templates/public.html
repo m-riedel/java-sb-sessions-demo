@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
 <head>
     <meta charset="UTF-8">
     <title>Public Page</title>
 </head>
 <body>
 This is public page.
+<a th:href="@{/login}">login</a>
+<span sec:authorize="isAuthenticated()">Sie sind Authentifiziert</span>
 </body>
 </html>

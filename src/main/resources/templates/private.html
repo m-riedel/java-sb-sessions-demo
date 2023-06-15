@@ -2,9 +2,11 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Public Page</title>
+    <title>Private Page</title>
 </head>
 <body>
 This is a private page.
+<a th:href="@{/logout}">logout</a>
+<span th:text="${user.username}"></span>
 </body>
 </html>
